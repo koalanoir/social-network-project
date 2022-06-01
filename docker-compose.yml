@@ -1,0 +1,22 @@
+
+version: '3.7'
+
+services:
+
+  api-comments:
+    container_name: api-comments
+    build:
+      context: api-comments
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+
+  api-publications:
+    container_name: api-publications
+    build:
+      context: api-publications
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - 8081:8081
